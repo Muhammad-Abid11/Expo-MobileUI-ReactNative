@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View, Image, TextInput } from 'react-native';
+import { StyleSheet, Text, View, Image, TextInput, Button, TouchableOpacity } from 'react-native';
 
 export default function App() {
   return (
@@ -11,7 +11,7 @@ export default function App() {
           { width: 300, height: 200, resizeMode: 'contain' }
         } //without size picture will not preview
         source={
-          { uri: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-0icqge5K-lfEi9OcA6UUm4o8yUMP3xgnWeZW--UnaKdzshZ5NRePCwvbqRgLwZm466A&usqp=CAU" }
+          { uri: "https://img.freepik.com/premium-photo/red-premium-business-sedan-car-sports-configuration-white-background-3d-rendering_101266-26555.jpg?w=2000" }
         }
       />
       <Text>{'\n'}BY Download Image below use by "Source with requrie" </Text>
@@ -37,6 +37,10 @@ export default function App() {
           color: "#fff"
         }}
       />
+      {/* <Button title={"Click me"} onPress={() => alert("Hello")} /> */}
+      <TouchableOpacity style={styles.btn} activeOpacity={0.8}>
+        <Text style={styles.btnText} onPress={() => alert("Hello")} >Click ME</Text>
+      </TouchableOpacity>
 
     </View>
 
@@ -50,4 +54,17 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
     alignItems: 'center',
   },
+  btn: {
+    backgroundColor: "red",
+    width: "20%",
+    height: "6%",
+    justifyContent: "center",
+    alignItems: "center"
+  },
+  btnText: {
+    fontWeight: "bold",
+    color: "white",
+
+  }
+
 });
