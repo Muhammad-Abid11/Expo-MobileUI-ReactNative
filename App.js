@@ -22,7 +22,10 @@ export default function App() {
         } //without size picture will not preview
       />
 
-      <TextInput placeholder='Enter Value'
+      <TextInput
+        secureTextEntry="true" // for password={true} both work
+        placeholder='Enter Value'
+        keyboardType='email-address'
         onChangeText={(text) => console.log(text)}
         // value='Abid' //by default value
         style={{
