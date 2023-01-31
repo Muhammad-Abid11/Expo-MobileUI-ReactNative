@@ -86,9 +86,20 @@ export default function App() {
           </Text>
         </View>
 
-        <View style={styles.card}>
-          <Text style={{ fontSize: 32 }}>Muhammad Abid</Text>
-        </View>
+
+        {[1, 2, 3, 4].map((v, i) => {
+          return (
+            <View style={styles.card}>
+              <Text style={{ fontSize: 32 }}>{i + 1}.Muhammad Abid</Text>
+            </View>
+          )
+        }
+        )
+        }
+
+
+
+
       </View>
 
     </ScrollView>
