@@ -1,4 +1,4 @@
-import { ImageBackground, FlatList, ScrollView, StyleSheet, Text, View, Image, TextInput, Button, TouchableOpacity } from 'react-native';
+import { ImageBackground, ActivityIndicator, FlatList, ScrollView, StyleSheet, Text, View, Image, TextInput, Button, TouchableOpacity } from 'react-native';
 
 export default function App() {
 
@@ -106,7 +106,7 @@ export default function App() {
         </View>
 
 
-        {/* {
+        {
           [1, 2, 3, 4].map((v, i) => {
             return (
               <View style={styles.card}>
@@ -117,8 +117,8 @@ export default function App() {
           )
         }
 
-         */}
-        {/* 
+
+
         <FlatList
           data={DATA}
           renderItem={(DATA) => {// jo bhi data ap upper recive krengy wo apko
@@ -129,8 +129,7 @@ export default function App() {
             )
           }}
           keyExtractor={item => item.id}
-        /> */}
-
+        />
 
         <ImageBackground source={image} resizeMode="cover" style={styles.image}>
           <Text style={styles.textBack}>Inside</Text>
