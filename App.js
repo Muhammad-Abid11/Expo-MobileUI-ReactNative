@@ -1,4 +1,4 @@
-import { FlatList, ScrollView, StyleSheet, Text, View, Image, TextInput, Button, TouchableOpacity } from 'react-native';
+import { ImageBackground, FlatList, ScrollView, StyleSheet, Text, View, Image, TextInput, Button, TouchableOpacity } from 'react-native';
 
 export default function App() {
 
@@ -17,9 +17,12 @@ export default function App() {
     },
   ];
 
+  const image = { uri: 'https://reactjs.org/logo-og.png' };
+
   return (
     <ScrollView>
       <View style={styles.container}>
+
         <Text style={{ fontSize: 42, color: "red" }}>Hello World</Text>
 
         <Text>{'\n'}BY URL Image below use by "Source with URI" </Text>
@@ -103,7 +106,7 @@ export default function App() {
         </View>
 
 
-        {
+        {/* {
           [1, 2, 3, 4].map((v, i) => {
             return (
               <View style={styles.card}>
@@ -114,19 +117,24 @@ export default function App() {
           )
         }
 
+         */}
+        {/* 
         <FlatList
           data={DATA}
-          renderItem={(DATA) => {
-            return (
+          renderItem={(DATA) => {// jo bhi data ap upper recive krengy wo apko
+            return (        //render me mil jayega phir ap usy nichy use kren
               <View style={styles.card}>
                 <Text style={{ fontSize: 32 }}>{DATA.item.title}</Text>
               </View>
             )
           }}
           keyExtractor={item => item.id}
-        />
+        /> */}
 
 
+        <ImageBackground source={image} resizeMode="cover" style={styles.image}>
+          <Text style={styles.textBack}>Inside</Text>
+        </ImageBackground>
       </View >
     </ScrollView>
 
@@ -209,5 +217,21 @@ const styles = StyleSheet.create({
     shadowRadius: 13.97,
 
     elevation: 21,
+  },
+  image: {
+    flex: 1,
+    width: "100%",
+    height: 400,
+    justifyContent: 'center',
+  },
+  textBack: {
+    color: 'white',
+    fontSize: 42,
+    lineHeight: 84,
+    fontWeight: 'bold',
+    textAlign: 'center',
+    backgroundColor: '#000000c0',
   }
+
+
 });
