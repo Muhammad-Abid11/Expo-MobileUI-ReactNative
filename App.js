@@ -85,6 +85,10 @@ export default function App() {
             Footer
           </Text>
         </View>
+
+        <View style={styles.card}>
+          <Text style={{ fontSize: 32 }}>Muhammad Abid</Text>
+        </View>
       </View>
 
     </ScrollView>
@@ -149,5 +153,23 @@ const styles = StyleSheet.create({
     height: 100,
     marginBottom: 10,
     justifyContent: "center"
+  },
+  card: {
+    backgroundColor: "grey",
+    width: "80%",
+    height: 100,
+    justifyContent: "center",
+    alignItems: "center",
+
+    // form   react native elevation
+    shadowColor: "#000",
+    shadowOffset: {
+      width: 0,
+      height: 10,
+    },
+    shadowOpacity: 0.53,
+    shadowRadius: 13.97,
+
+    elevation: 21,
   }
 });
