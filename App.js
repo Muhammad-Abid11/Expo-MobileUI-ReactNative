@@ -1,6 +1,22 @@
-import { ScrollView, StyleSheet, Text, View, Image, TextInput, Button, TouchableOpacity } from 'react-native';
+import { FlatList, ScrollView, StyleSheet, Text, View, Image, TextInput, Button, TouchableOpacity } from 'react-native';
 
 export default function App() {
+
+  const DATA = [
+    {
+      id: 'bd7acbea-c1b1-46c2-aed5-3ad53abb28ba',
+      title: 'First Item',
+    },
+    {
+      id: '3ac68afc-c605-48d3-a4f8-fbd91aa97f63',
+      title: 'Second Item',
+    },
+    {
+      id: '58694a0f-3da1-471f-bd96-145571e29d72',
+      title: 'Third Item',
+    },
+  ];
+
   return (
     <ScrollView>
       <View style={styles.container}>
@@ -87,22 +103,33 @@ export default function App() {
         </View>
 
 
-        {[1, 2, 3, 4].map((v, i) => {
-          return (
-            <View style={styles.card}>
-              <Text style={{ fontSize: 32 }}>{i + 1}.Muhammad Abid</Text>
-            </View>
+        {
+          [1, 2, 3, 4].map((v, i) => {
+            return (
+              <View style={styles.card}>
+                <Text style={{ fontSize: 32 }}>{i + 1}.Muhammad Abid</Text>
+              </View>
+            )
+          }
           )
         }
-        )
-        }
+
+        <FlatList
+          data={DATA}
+          renderItem={(DATA) => {
+            return (
+              <View style={styles.card}>
+                <Text style={{ fontSize: 32 }}>{DATA.item.title}</Text>
+              </View>
+            )
+          }}
+          keyExtractor={item => item.id}
+        />
 
 
-
-
-      </View>
-
+      </View >
     </ScrollView>
+
   );
 }
 
