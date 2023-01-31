@@ -43,7 +43,50 @@ export default function App() {
           <Text style={styles.btnText} onPress={() => alert("Hello")} >Click ME</Text>
         </TouchableOpacity>
 
+
+        <View style={styles.main1}>
+          <Text style={styles.text}>
+            Header
+          </Text>
+        </View>
+
+        <View style={styles.main2}>
+          <View style={styles.boxes}>
+            <View style={styles.item}>
+              <Text>Item</Text>
+
+            </View>
+            <View style={styles.item}>
+              <Text>Item</Text>
+
+            </View>
+            <View style={styles.item}>
+              <Text>Item</Text>
+
+            </View>
+            <View style={styles.item}>
+              <Text>Item</Text>
+
+            </View>
+            <View style={styles.item}>
+              <Text>Item</Text>
+
+            </View>
+            <View style={styles.item}>
+              <Text>Item</Text>
+
+            </View>
+
+          </View>
+        </View>
+
+        <View style={styles.main3}>
+          <Text style={styles.text}>
+            Footer
+          </Text>
+        </View>
       </View>
+
     </ScrollView>
   );
 }
@@ -61,11 +104,50 @@ const styles = StyleSheet.create({
     height: "6%",
     justifyContent: "center",
     alignItems: "center"
+
   },
   btnText: {
     fontWeight: "bold",
     color: "white",
 
-  }
+  },
+  main1: {
+    backgroundColor: "blue",
+    width: "100%",
+    flex: 1,
+    height: 100
+  },
+  main2: {
+    backgroundColor: "green",
+    width: "100%",
+    flex: 1,
+    height: 530,
+    justifyContent: "center"
 
+
+  },
+  main3: {
+    backgroundColor: "yellow",
+    width: "100%",
+    flex: 1,
+    height: 100
+
+  },
+  text: {
+    fontSize: 30,
+    color: "#fff"
+  },
+  boxes: {
+    margin: 10,
+    flexDirection: "row",
+    justifyContent: "space-around",
+    flexWrap: 'wrap',
+  },
+  item: {
+    backgroundColor: "#fff",
+    width: 100,
+    height: 100,
+    marginBottom: 10,
+    justifyContent: "center"
+  }
 });
